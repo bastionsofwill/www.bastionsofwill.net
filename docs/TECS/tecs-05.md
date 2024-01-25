@@ -1,10 +1,8 @@
 ---
-title: 밑바닥부터 만드는 컴퓨팅 시스템 05
+title: The Elements of Computing Systems 05
 tags:
   - books
-  - fundamental
-  - TECS
-date: 2022-07-22 17:58:10
+  - CS
 ---
 
 
@@ -43,7 +41,7 @@ CPU는 명령어를 입력받아 이를 수행하는, 컴퓨터에서 가장 핵
 ### Computer
 구현한 Memory와 CPU를 사용하여 reset 신호만 받아서 .hack 확장자의 어셈블리 프로그램을 실행할 수 있는 플랫폼이다. 
 말이 칩이지 입력이라고는 달랑 1비트짜리 reset 하나에 출력은 아예 없는 것이 드디어 컴퓨터에 가까운 무언가가 등장했다고 느껴졌지만, 이를 구현하는 과정이 굉장히 막막할 뻔했다.
-![](../static/images/tecs05-computer.png) 
+![](/images/tecs05-computer.png) 
 다행히 책에서 구조를 다 설계해줘서 그동안 구현한 칩을 책에 나온대로 이어붙이기만 하면 실제로 명령어를 실행할 수 있는 컴퓨터의 구조를 만들어볼 수 있었다.
 
 Computer는 ROM32K라는 Built-in 칩에 존재하는 명령어를 PC가 정해주는 순서대로 수행한다.

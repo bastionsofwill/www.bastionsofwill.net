@@ -1,10 +1,8 @@
 ---
-title: 밑바닥부터 만드는 컴퓨팅 시스템 04
+title: The Elements of Computing Systems 04
 tags:
   - book
-  - fundamental
-  - TECS
-date: 2022-07-13 18:18:49
+  - CS
 ---
 
 ## Machine Language
@@ -24,11 +22,11 @@ CPU가 수행하는 모든 작업은 본질적으로 명령어(Instruction)에 �
 메모리의 주소 공간을 15비트로 정의하면서, 2^15 = 대략 32K개의 레지스터를 사용할 수 있게 되었지만, 16비트 명령어에 15비트짜리 메모리 주소를 사용할 수가 없으므로 주소를 통한 메모리의 접근은 A 레지스터의 값을 주소로 사용하는 방식을 채택하였다.
 또, 특정 주소 구간의 레지스터를 모니터 출력(0x4000 ~ 0x5999)과 키보드 입력(0x6000)으로 할당해서 입/출력 장치와의 상호작용도 가능했다.
 
-![](../static/images/tecs04-assembler.png)
+![](/images/tecs04-assembler.png)
 
 작성한 프로그램을 위와 같이 assembler를 통해 .hack 확장자를 가진 binary 파일로 변환하였다.
 
-![](../static/images/tecs04-CPUsimulator.png)
+![](/images/tecs04-CPUsimulator.png)
 
 binary 파일을 시뮬레이터로 실행하면서 키보드의 입력에 따라 모니터의 픽셀이 검은 색으로 채워져 나가는 과정을 확인할 수 있다.
 문제는 과제에서 제시한 대로 모니터 전체를 검은 색으로 채우기 위해서는 레지스터 8192개의 값을 -1로 설정해야 했는데, 가장 빠른 속도로 프로그램을 설정하여도 몇십 분은 걸릴 듯하여 포기하였다.
@@ -37,5 +35,5 @@ binary 파일을 시뮬레이터로 실행하면서 키보드의 입력에 따�
 ### 출처
 - 밑바닥부터 만드는 컴퓨팅 시스템(노암 니산, 시몬 쇼켄 / 인사이트 / 2019)
 - https://www.nand2tetris.org/
-https://stackoverflow.com/questions/8065026/assembly-language-standard
-https://standards.ieee.org/ieee/694/950/
+- https://stackoverflow.com/questions/8065026/assembly-language-standard
+- https://standards.ieee.org/ieee/694/950/
